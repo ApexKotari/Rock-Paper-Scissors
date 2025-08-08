@@ -554,20 +554,133 @@ video {
   display: none;
 }
 
-.z-20 {
-  z-index: 20;
+.-my-\[28px\] {
+  margin-top: -28px;
+  margin-bottom: -28px;
+}
+
+.-my-\[40px\] {
+  margin-top: -40px;
+  margin-bottom: -40px;
+}
+
+.-my-\[25px\] {
+  margin-top: -25px;
+  margin-bottom: -25px;
+}
+
+.-my-\[20px\] {
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+.-my-\[29px\] {
+  margin-top: -29px;
+  margin-bottom: -29px;
+}
+
+.-my-\[33px\] {
+  margin-top: -33px;
+  margin-bottom: -33px;
+}
+
+.-my-\[35px\] {
+  margin-top: -35px;
+  margin-bottom: -35px;
+}
+
+.-my-\[30px\] {
+  margin-top: -30px;
+  margin-bottom: -30px;
+}
+
+.-my-\[4px\] {
+  margin-top: -4px;
+  margin-bottom: -4px;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.ml-\[27px\] {
+  margin-left: 27px;
+}
+
+.ml-\[10px\] {
+  margin-left: 10px;
+}
+
+.ml-\[15px\] {
+  margin-left: 15px;
+}
+
+.ml-\[16px\] {
+  margin-left: 16px;
+}
+
+.ml-\[17px\] {
+  margin-left: 17px;
+}
+
+.ml-\[20px\] {
+  margin-left: 20px;
+}
+
+.ml-\[23px\] {
+  margin-left: 23px;
+}
+
+.-mt-\[40px\] {
+  margin-top: -40px;
+}
+
+.-mt-\[35px\] {
+  margin-top: -35px;
+}
+
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
+.ml-8 {
+  margin-left: 2rem;
+}
+
+.-ml-2 {
+  margin-left: -0.5rem;
+}
+
+.-ml-1 {
+  margin-left: -0.25rem;
+}
+
+.-ml-\[5px\] {
+  margin-left: -5px;
+}
+
+.-ml-\[15px\] {
+  margin-left: -15px;
+}
+
+.ml-\[25px\] {
+  margin-left: 25px;
 }
 
 .flex {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-full {
   height: 100%;
 }
 
-.min-h-full {
-  min-height: 100%;
+.h-screen {
+  height: 100vh;
 }
 
 .w-full {
@@ -604,4 +717,189 @@ video {
 .bg-\[\#933d3d\] {
   --tw-bg-opacity: 1;
   background-color: rgb(147 61 61 / var(--tw-bg-opacity, 1));
+}
+
+.font-arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-\[3rem\] {
+  font-size: 3rem;
+}
+
+.text-\[6\.4rem\] {
+  font-size: 6.4rem;
+}
+
+.text-\[8rem\] {
+  font-size: 8rem;
+}
+
+.text-\[9rem\] {
+  font-size: 9rem;
+}
+
+.text-\[6rem\] {
+  font-size: 6rem;
+}
+
+.text-\[5\.2rem\] {
+  font-size: 5.2rem;
+}
+
+.text-\[5\.5rem\] {
+  font-size: 5.5rem;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.tracking-\[13px\] {
+  letter-spacing: 13px;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
+.tracking-\[10px\] {
+  letter-spacing: 10px;
+}
+
+.tracking-\[12px\] {
+  letter-spacing: 12px;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+.tracking-\[2px\] {
+  letter-spacing: 2px;
+}
+
+.tracking-\[3px\] {
+  letter-spacing: 3px;
+}
+
+.tracking-\[4px\] {
+  letter-spacing: 4px;
+}
+
+.tracking-\[14px\] {
+  letter-spacing: 14px;
+}
+
+.tracking-\[16px\] {
+  letter-spacing: 16px;
+}
+
+.tracking-\[18px\] {
+  letter-spacing: 18px;
+}
+
+.tracking-\[20px\] {
+  letter-spacing: 20px;
+}
+
+.tracking-\[25px\] {
+  letter-spacing: 25px;
+}
+
+.tracking-\[24px\] {
+  letter-spacing: 24px;
+}
+
+.tracking-\[23px\] {
+  letter-spacing: 23px;
+}
+
+.tracking-\[21px\] {
+  letter-spacing: 21px;
+}
+
+.text-\[\#e7d2b1\] {
+  --tw-text-opacity: 1;
+  color: rgb(231 210 177 / var(--tw-text-opacity, 1));
+}
+
+@media (min-width: 480px) {
+  .xs\:ml-\[27px\] {
+    margin-left: 27px;
+  }
+
+  .xs\:-ml-\[27px\] {
+    margin-left: -27px;
+  }
+
+  .xs\:-ml-\[47px\] {
+    margin-left: -47px;
+  }
+
+  .xs\:ml-8 {
+    margin-left: 2rem;
+  }
+
+  .xs\:ml-\[29px\] {
+    margin-left: 29px;
+  }
+
+  .xs\:ml-\[30px\] {
+    margin-left: 30px;
+  }
+
+  .xs\:bg-slate-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(241 245 249 / var(--tw-bg-opacity, 1));
+  }
+
+  .xs\:tracking-\[13px\] {
+    letter-spacing: 13px;
+  }
+
+  .xs\:tracking-normal {
+    letter-spacing: 0em;
+  }
+
+  .xs\:tracking-\[23px\] {
+    letter-spacing: 23px;
+  }
+
+  .xs\:tracking-\[18px\] {
+    letter-spacing: 18px;
+  }
+
+  .xs\:tracking-\[22px\] {
+    letter-spacing: 22px;
+  }
+
+  .xs\:tracking-\[20px\] {
+    letter-spacing: 20px;
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:ml-\[27px\] {
+    margin-left: 27px;
+  }
+
+  .sm\:-ml-\[47px\] {
+    margin-left: -47px;
+  }
+
+  .sm\:bg-slate-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(241 245 249 / var(--tw-bg-opacity, 1));
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:text-\[3rem\] {
+    font-size: 3rem;
+  }
 }

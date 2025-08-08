@@ -78,6 +78,12 @@ module.exports = {
           },
         },
       },
+      fontFamily: {
+        arial: ["Arial", "Helvetica", "sans-serif"],
+      },
+      screens: {
+        xs: "480px",
+      },
     },
   },
   plugins: [],

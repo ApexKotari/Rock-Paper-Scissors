@@ -3,21 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game</title>
+    <title>do it</title>
     <link rel="stylesheet" href="./style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="flex justify-center min-h-full bg-[#933d3d]">
+  <body class="flex items-center justify-center h-screen bg-[#933d3d]">
+    <!-- intro animation -->
     <div
-      class="w-full h-full flex flex-col items-center justify-center bg-[#23434b] z-20 animate-grow"
+      class="w-full h-full bg-[#23434b] flex items-center justify-center hidden"
       id="intro"
     >
-      <p class="">ROCK</p>
-      <p><span>PAPER</span></p>
-      <p>SCISSSORS</p>
+      <div class="flex flex-col items-center justify-center animate-grow">
+        <p
+          class="text-[8rem] font-arial font-extrabold text-[#e7d2b1] -my-[30px] tracking-[4px] xs:tracking-normal"
+        >
+          ROCK
+        </p>
+        <p
+          class="font-arial font-extrabold text-[#e7d2b1] text-[5.5rem] -my-[35px] -mt-[35px] tracking-[21px] xs:tracking-[23px] ml-[25px] xs:ml-8"
+        >
+          PAPER
+        </p>
+        <p
+          class="font-arial font-extrabold text-[#e7d2b1] text-[3rem] tracking-[18px] xs:tracking-[20px] ml-[23px] xs:ml-[30px]"
+        >
+          SCISSORS
+        </p>
+      </div>
+    </div>
+    <!-- lobby -->
+    <div>
+      <h1>Rock Paper Scissors</h1>
+      <h2>choose your weapon</h2>
+      <div>
+        <div class="card">
+          <img src="./rock.jpg" alt="Rock" title="Rock" />
+        </div>
+        <div class="card">
+          <img src="./paper.jpg" alt="Paper" title="Paper" />
+        </div>
+        <div class="card">
+          <img src="./scissor.jpg" alt="Scissors" title="Scissors" />
+        </div>
+      </div>
     </div>
   </body>
 </html>
