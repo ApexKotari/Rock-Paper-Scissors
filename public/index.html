@@ -9,8 +9,16 @@
       href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f0fe95102f.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body class="flex items-center justify-center h-screen bg-[#933d3d]">
+  <body class="flex items-center justify-center h-full bg-[#933d3d]">
     <!-- intro animation -->
     <div
       class="w-full h-full bg-[#23434b] flex items-center justify-center hidden"
@@ -35,19 +43,153 @@
       </div>
     </div>
     <!-- lobby -->
-    <div>
-      <h1>Rock Paper Scissors</h1>
-      <h2>choose your weapon</h2>
-      <div>
-        <div class="card">
-          <img src="./rock.jpg" alt="Rock" title="Rock" />
+    <div class="flex flex-col items-center p-4 w-screen">
+      <h1
+        class="text-fluid-size font-abril tracking-widest font-bold text-primary"
+      >
+        Rock Paper Scissors
+      </h1>
+      <h2
+        class="text-center text-[20px] bg-[rgb(53,150,174)] py-2 px-7 rounded-lg text-white font-verdana font-bold border-dotted border-2 mt-6 lg:mt-2"
+      >
+        choose your weapon
+      </h2>
+      <div class="grid gap-4 mt-6 lg:mt-4 grid-cols-mobile xs:grid-cols-fluid">
+        <div
+          class="group bg-[rgb(227, 220, 212)] rounded-lg transition-all ease-in-out overflow-hidden cursor-pointer hover:border-blue-500 hover:border-2"
+        >
+          <img
+            class="max-w-full h-auto group-hover:scale-110 transition-all ease-in-out duration-200"
+            src="./images/rock.jpg"
+            alt="Rock"
+            title="Rock"
+          />
         </div>
-        <div class="card">
-          <img src="./paper.jpg" alt="Paper" title="Paper" />
+        <div
+          class="group bg-[rgb(227, 220, 212)] rounded-lg transition-all ease-in-out overflow-hidden cursor-pointer hover:border-blue-500 hover:border-2"
+        >
+          <img
+            class="max-w-full h-auto group-hover:scale-110 duration-200"
+            src="./images/paper.jpg"
+            alt="Paper"
+            title="Paper"
+          />
         </div>
-        <div class="card">
-          <img src="./scissor.jpg" alt="Scissors" title="Scissors" />
+        <div
+          class="group bg-[rgb(227, 220, 212)] rounded-lg transition-all ease-in-out overflow-hidden cursor-pointer hover:border-blue-500 hover:border-2"
+        >
+          <img
+            class="max-w-full h-auto group-hover:scale-110 duration-200"
+            src="./images/scissor.jpg"
+            alt="Scissors"
+            title="Scissors"
+          />
         </div>
+      </div>
+      <button
+        class="group mt-8 lg:mt-6 xs:mt-12 text-2xl font-bold bg-button text-black py-2 px-2 rounded-xl cursor-pointer overflow-hidden w-[290px] hover:bg-[rgb(255,72,0)]"
+        id="start"
+      >
+        <span
+          class="group-hover:py-0 group-hover:transition-all ease-in-out duration-500 inline-block group-hover:-translate-x-[135px]"
+          >Let the Ba</span
+        ><span class="hidden group-hover:inline-block group-hover:animate-scale"
+          >⚔️</span
+        ><span
+          class="group-hover:py-0 group-hover:transition-all ease-in-out duration-500 inline-block group-hover:translate-x-[135px]"
+          >ttle Begin</span
+        >
+      </button>
+    </div>
+    <!-- lobby -->
+    <div class="flex flex-col p-2 relative" id="game">
+      <div class="text-clip text-3xl font-extrabold">
+        <p>Round:<span id="round">1</span></p>
+      </div>
+      <h1 class="rule">Score 3 to conquer the bot!</h1>
+      <div class="schore-board">
+        <div class="you">
+          <span>YOU</span>
+          <span id="my-score">0</span>
+        </div>
+        <div class="vs">
+          <span>VS</span>
+        </div>
+        <div class="com">
+          <span>COMPUTER</span>
+          <span id="com-score">0</span>
+        </div>
+      </div>
+      <div class="arena" id="arena">
+        <div id="you">
+          <img id="player-image" src="/paper.jpg" alt="" />
+        </div>
+        <div id="computer">
+          <div class="animation-sec">
+            <img src="/rock.jpg" alt="" />
+            <img src="/paper.jpg" alt="" />
+            <img src="/scissor.jpg" alt="" />
+            <img src="/rock.jpg" alt="" />
+          </div>
+          <img id="com-image" src="" alt="" />
+        </div>
+      </div>
+      <div class="result">
+        <p class="para" id="won">
+          <i class="fa-solid fa-trophy"></i> <span>YOU WON!</span>
+        </p>
+        <p class="para" id="lose">
+          <i class="fa-regular fa-face-frown"></i><span>YOU LOSE!</span>
+        </p>
+        <p class="para" id="tie">TIE!</p>
+        <button id="next" class="next">
+          <span>next round </span>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#333"
+            >
+              <path
+                d="M762-96  57-23t57 12-59-12Zm118-628L426-270l5 57t-23 57l-28 28-88-88L198-96q-12 12-28 12t-28-12l-50-50q-12-12-12-28t12-28l116-117-88-88 28-28q23-23 57-23t57 23l4 5 454-454h160v160Z334-583l24-23 2 23Zm-56 57L80-724v 56-174-174h-47v47l174 174-56 57Zm92 199 430-430v-47h-47L323-374l47"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <!-- next round -->
+      <div class="reselect" id="reselect">
+        <h2>Choose your weapon</h2>
+        <div class="weapons">
+          <div class="sec">
+            <img src="./rock.jpg" alt="Rock" title="Rock" />
+          </div>
+          <div class="sec">
+            <img src="./paper.jpg" alt="Paper" title="Paper" />
+          </div>
+          <div class="sec">
+            <img src="./scissor.jpg" alt="Scissors" title="Scissors" />
+          </div>
+        </div>
+        <button class="strike" id="strike">
+          <span id="sword-container"
+            ><svg
+              id="sword"
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#333"
+            >
+              <path
+                d="M762-96  57-23t57 12-59-12Zm118-628L426-270l5 57t-23 57l-28 28-88-88L198-96q-12 12-28 12t-28-12l-50-50q-12-12-12-28t12-28l116-117-88-88 28-28q23-23 57-23t57 23l4 5 454-454h160v160Z334-583l24-23 2 23Zm-56 57L80-724v 56-174-174h-47v47l174 174-56 57Zm92 199 430-430v-47h-47L323-374l47"
+              />
+            </svg>
+          </span>
+          <span>strike agin</span>
+        </button>
       </div>
     </div>
   </body>

@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       animation: {
         grow: "grow 0.5s linear 0s 1",
-        scale: "scale 0.5s ease-in-out",
+        scale: "scale 0.3s ease-in-out",
         move: "move 0.7s steps(3) infinite",
         lean: "lean 0.8s ease-in",
         strike: "strike 1s ease-in-forwards",
@@ -80,9 +80,22 @@ module.exports = {
       },
       fontFamily: {
         arial: ["Arial", "Helvetica", "sans-serif"],
+        abril: ['"Abril Fatface"', "serif"],
+        verdana: ["Verdana", "Geneva", "Tahoma", "sans - serif"],
       },
       screens: {
         xs: "480px",
+      },
+      fontSize: {
+        "fluid-size": "clamp(1.3rem, 8vw, 3rem)",
+      },
+      gridTemplateColumns: {
+        fluid: "repeat(auto-fit, minmax(150px, 1fr))",
+        mobile: "repeat(1, 150px)",
+      },
+      colors: {
+        primary: "rgb(245,245,220)",
+        button: "rgb(255,215,0)",
       },
     },
   },
