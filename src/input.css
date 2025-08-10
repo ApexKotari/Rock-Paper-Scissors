@@ -2,3 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
+.text-shadow-custom {
+  text-shadow: 3px 3px black, 4px 4px rgb(57, 57, 197);
+}
+.sword-container {
+  animation: strike 1.5s ease-in-out forwards;
+}
+.custom-transform {
+  display: inline-block;
+  transform: translateX(15px) translateY(-2px) rotateZ(-40deg);
+  height: 30px;
+  width: 30px;
+}
+.sword {
+  animation: lean 1s ease-in-out;
+}
+@keyframes lean {
+  100% {
+    transform: rotateZ(40deg);
+  }
+}

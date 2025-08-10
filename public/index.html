@@ -43,7 +43,7 @@
       </div>
     </div>
     <!-- lobby -->
-    <div class="flex flex-col items-center p-4 w-screen">
+    <div class="hidden flex-col items-center p-4 w-screen">
       <h1
         class="text-fluid-size font-abril tracking-widest font-bold text-primary"
       >
@@ -54,6 +54,7 @@
       >
         choose your weapon
       </h2>
+      <!-- weapon container -->
       <div class="grid gap-4 mt-6 lg:mt-4 grid-cols-mobile xs:grid-cols-fluid">
         <div
           class="group bg-[rgb(227, 220, 212)] rounded-lg transition-all ease-in-out overflow-hidden cursor-pointer hover:border-blue-500 hover:border-2"
@@ -102,49 +103,84 @@
       </button>
     </div>
     <!-- lobby -->
-    <div class="flex flex-col p-2 relative" id="game">
-      <div class="text-clip text-3xl font-extrabold">
-        <p>Round:<span id="round">1</span></p>
+    <div
+      class="flex flex-col p-2 relative items-center ml-28 xs:ml-0"
+      id="game"
+    >
+      <div class="text-center text-3xl font-extrabold text-primary font-gill">
+        <p>Round:<span class="ml-2" id="round">1</span></p>
       </div>
-      <h1 class="rule">Score 3 to conquer the bot!</h1>
-      <div class="schore-board">
-        <div class="you">
-          <span>YOU</span>
-          <span id="my-score">0</span>
+      <h1
+        class="text-center font-extrabold text-primary w-fit text-xl mt-1 font-gill tracking-wide"
+      >
+        Score 3 to conquer the bot!
+      </h1>
+      <!-- score board -->
+      <div
+        class="flex justify-between border-y-[1.4px] border-customborder text-2xl font-segoe px-10 font-semibold gap-14"
+      >
+        <div class="flex flex-col items-center ml-12">
+          <span class="text-white text-2xl">YOU</span>
+          <span
+            id="my-score"
+            class="text-yellow-200 text-5xl text-shadow-custom"
+            >0</span
+          >
         </div>
-        <div class="vs">
+        <div class="mt-7 text-4xl text-yellow-200 ml-14 mr-2">
           <span>VS</span>
         </div>
-        <div class="com">
-          <span>COMPUTER</span>
-          <span id="com-score">0</span>
+        <div class="flex flex-col items-center pr-5">
+          <span class="text-white text-2xl">COMPUTER</span>
+          <span
+            id="com-score"
+            class="text-yellow-200 text-5xl text-shadow-custom"
+            >0</span
+          >
         </div>
       </div>
-      <div class="arena" id="arena">
-        <div id="you">
-          <img id="player-image" src="/paper.jpg" alt="" />
+      <!-- hand display -->
+      <div class="flex p-3 gap-5 xs:gap-12 xs:flex-row flex-col" id="arena">
+        <div class="w-[250px] h-auto" id="you">
+          <img
+            class="max-w-full h-auto rounded-lg"
+            id="player-image"
+            src="./images/paper.jpg"
+            alt="Player weapon"
+          />
         </div>
-        <div id="computer">
-          <div class="animation-sec">
-            <img src="/rock.jpg" alt="" />
-            <img src="/paper.jpg" alt="" />
-            <img src="/scissor.jpg" alt="" />
-            <img src="/rock.jpg" alt="" />
+        <div class="w-[250px] h-auto overflow-hidden rounded-lg" id="computer">
+          <div class="flex animate-move">
+            <img class="rounded-none" src="./images/rock.jpg" alt="" />
+            <img class="rounded-none" src="./images/paper.jpg" alt="" />
+            <img class="rounded-none" src="./images/scissor.jpg" alt="" />
+            <img class="rounded-none" src="./images/rock.jpg" alt="" />
           </div>
-          <img id="com-image" src="" alt="" />
+          <img class="hidden" id="com-image" src="" alt="computer weapon" />
         </div>
       </div>
-      <div class="result">
-        <p class="para" id="won">
-          <i class="fa-solid fa-trophy"></i> <span>YOU WON!</span>
+      <!-- qucik result -->
+      <div
+        class="flex flex-col items-center text-center text-4xl text-primary font-impact tracking-wider"
+      >
+        <p class="flex-col animate-grow2 mt-3 hidden" id="won">
+          <i
+            class="flex flex-col fa-solid fa-trophy text-yellow-200 animate-shake"
+          ></i>
+          <span>YOU WON!</span>
         </p>
-        <p class="para" id="lose">
-          <i class="fa-regular fa-face-frown"></i><span>YOU LOSE!</span>
+        <p class="flex-col gap-2 animate-grow2 hidden" id="lose">
+          <i class="fa-regular fa-face-frown text-yellow-200 animate-down"></i
+          ><span>YOU LOSE!</span>
         </p>
-        <p class="para" id="tie">TIE!</p>
-        <button id="next" class="next">
+        <p class="animate-grow2 hidden" id="tie">TIE!</p>
+        <!-- button for next round-->
+        <button
+          id="next"
+          class="text-[17px] bg-button text-black px-3 rounded-lg cursor-pointer tracking-[5px] gap-2 my-auto mt-3 overflow-hidden relative items-center hidden"
+        >
           <span>next round </span>
-          <span>
+          <span class="animate-right">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -159,23 +195,54 @@
           </span>
         </button>
       </div>
-      <!-- next round -->
-      <div class="reselect" id="reselect">
-        <h2>Choose your weapon</h2>
-        <div class="weapons">
-          <div class="sec">
-            <img src="./rock.jpg" alt="Rock" title="Rock" />
+      <!-- next round weapon section-->
+      <div
+        class="flex flex-col absolute top-40 rounded-lg h-auto w-[30rem] xs:w-[33rem] sm:w-[36rem] md:w-[700px] bg-[#921a1a] items-center p-3"
+        id="reselect"
+      >
+        <h2 class="text-lg text-clip text-white mt-3">Choose your weapon</h2>
+        <div class="grid grid-cols-mobile xs:grid-cols-fluid gap-3 mt-4">
+          <div
+            class="group p-2 bg-white rounded-md transition-all ease-in-out overflow-hidden mt-1 cursor-pointer hover:border-[3px] hover:border-blue-800"
+          >
+            <img
+              class="group-hover:scale-105 transition-all ease-in-out duration-200 max-w-full h-auto"
+              src="./images/rock.jpg"
+              alt="Rock"
+              title="Rock"
+            />
           </div>
-          <div class="sec">
-            <img src="./paper.jpg" alt="Paper" title="Paper" />
+          <div
+            class="group p-2 bg-white rounded-md transition-all ease-in-out overflow-hidden mt-1 cursor-pointer hover:border-[3px] hover:border-blue-800"
+          >
+            <img
+              class="group-hover:scale-105 transition-all ease-in-out duration-200"
+              src="./images/paper.jpg"
+              alt="Paper"
+              title="Paper"
+            />
           </div>
-          <div class="sec">
-            <img src="./scissor.jpg" alt="Scissors" title="Scissors" />
+          <div
+            class="group p-2 bg-white rounded-md transition-all ease-in-out overflow-hidden mt-1 cursor-pointer hover:border-[3px] hover:border-blue-800"
+          >
+            <img
+              class="group-hover:scale-105 transition-all ease-in-out duration-200"
+              src="./images/scissor.jpg"
+              alt="Scissors"
+              title="Scissors"
+            />
           </div>
         </div>
-        <button class="strike" id="strike">
-          <span id="sword-container"
+        <!-- strike again button -->
+        <button
+          class="font-verdana text-[1.3rem] font-bold bg-button text-black py-2 px-6 rounded-3xl cursor-pointer tracking-widest flex gap-2 mt-10 overflow-hidden relative"
+          id="strike"
+        >
+          <span
+            class="absolute inline-block bg-button w-[400px] -left-[380px] z-20 text-right animate-strike"
+            id="sword-container"
             ><svg
+              class="custom-transform"
               id="sword"
               xmlns="http://www.w3.org/2000/svg"
               height="24px"
@@ -188,7 +255,7 @@
               />
             </svg>
           </span>
-          <span>strike agin</span>
+          <span class="translate-x-[10px]">strike again</span>
         </button>
       </div>
     </div>

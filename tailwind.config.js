@@ -7,13 +7,12 @@ module.exports = {
         grow: "grow 0.5s linear 0s 1",
         scale: "scale 0.3s ease-in-out",
         move: "move 0.7s steps(3) infinite",
-        lean: "lean 0.8s ease-in",
         strike: "strike 1s ease-in-forwards",
         right: "right 0.5s alternate infinite ease-in-out",
         grow2: "grow2 0.5s linear 0s 1",
-        shake: "shake 0.5s infinite alternate ease-in-out",
-        animation: "down 1s cubic-bexier(0.075, 0.82, 0.165, 1) infinite",
+        shake: "shake 0.5s  alternate ease-in-out infinite",
         fall: "fall 1s ease-out forwards",
+        down: "down 1s cubic-bezier(0.075, 0.82, 0.165, 1) infinite",
       },
       keyframes: {
         grow: {
@@ -77,11 +76,41 @@ module.exports = {
             opacity: "1",
           },
         },
+        down: {
+          "0%": {
+            transform: "rotateX(-30deg)",
+          },
+          "50%": {
+            transform: "rotateX(30deg) rotateY(-20deg)",
+          },
+          "100%": {
+            transform: "rotateY(20deg)",
+          },
+        },
+        lean: {
+          "100%": {
+            transform: "rotateZ(40deg)",
+          },
+        },
       },
       fontFamily: {
         arial: ["Arial", "Helvetica", "sans-serif"],
         abril: ['"Abril Fatface"', "serif"],
         verdana: ["Verdana", "Geneva", "Tahoma", "sans - serif"],
+        gill: [
+          '"Gill Sans"',
+          '"Gill Sans MT"',
+          '"Calibri"',
+          '"Trebuchet MS"',
+          '"sans-seri"',
+        ],
+        impact: [
+          "Impact",
+          "Haettenschweiler",
+          '"Arial Narrow Bold"',
+          "sans-serif",
+        ],
+        segoe: ['"Segoe UI"', "Tahoma", "Geneva", "Verdana", "sans-serif"],
       },
       screens: {
         xs: "480px",
@@ -91,11 +120,12 @@ module.exports = {
       },
       gridTemplateColumns: {
         fluid: "repeat(auto-fit, minmax(150px, 1fr))",
-        mobile: "repeat(1, 150px)",
+        mobile: "repeat(1, 200px)",
       },
       colors: {
         primary: "rgb(245,245,220)",
         button: "rgb(255,215,0)",
+        customborder: "rgb(145, 110, 58)",
       },
     },
   },
