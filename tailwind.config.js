@@ -12,6 +12,7 @@ module.exports = {
         grow2: "grow2 0.5s linear 0s 1",
         shake: "shake 0.5s  alternate ease-in-out infinite",
         fall: "fall 1s ease-out forwards",
+        swordfall: "swordfall 1s ease-in forwards",
         down: "down 1s cubic-bezier(0.075, 0.82, 0.165, 1) infinite",
       },
       keyframes: {
@@ -76,6 +77,14 @@ module.exports = {
             opacity: "1",
           },
         },
+        swordfall: {
+          from: {
+            transform: "translateY(-50px)",
+          },
+          to: {
+            transform: "rotateZ(-10deg)",
+          },
+        },
         down: {
           "0%": {
             transform: "rotateX(-30deg)",
@@ -111,6 +120,7 @@ module.exports = {
           "sans-serif",
         ],
         segoe: ['"Segoe UI"', "Tahoma", "Geneva", "Verdana", "sans-serif"],
+        libertinus: ['"Libertinus Serif"', "serif"],
       },
       screens: {
         xs: "480px",

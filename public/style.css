@@ -614,6 +614,10 @@ video {
   z-index: 20;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .-my-\[30px\] {
   margin-top: -30px;
   margin-bottom: -30px;
@@ -669,6 +673,10 @@ video {
   margin-top: 2.5rem;
 }
 
+.mt-11 {
+  margin-top: 2.75rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -705,12 +713,20 @@ video {
   display: none;
 }
 
+.h-\[400px\] {
+  height: 400px;
+}
+
 .h-auto {
   height: auto;
 }
 
 .h-full {
   height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .w-\[250px\] {
@@ -729,6 +745,10 @@ video {
   width: 400px;
 }
 
+.w-\[70\%\] {
+  width: 70%;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -744,6 +764,11 @@ video {
 
 .max-w-full {
   max-width: 100%;
+}
+
+.-translate-y-\[150px\] {
+  --tw-translate-y: -150px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .translate-x-\[10px\] {
@@ -767,6 +792,17 @@ video {
 
 .animate-down {
   animation: down 1s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fall {
+  animation: fall 1s ease-out forwards;
 }
 
 @keyframes grow {
@@ -841,6 +877,20 @@ video {
   animation: strike 1s ease-in-forwards;
 }
 
+@keyframes swordfall {
+  from {
+    transform: translateY(-50px);
+  }
+
+  to {
+    transform: rotateZ(-10deg);
+  }
+}
+
+.animate-swordfall {
+  animation: swordfall 1s ease-in forwards;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -885,12 +935,20 @@ video {
   gap: 1.25rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
 
 .text-clip {
   text-overflow: clip;
+}
+
+.text-balance {
+  text-wrap: balance;
 }
 
 .rounded-3xl {
@@ -998,6 +1056,11 @@ video {
   padding-right: 1.75rem;
 }
 
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -1005,6 +1068,10 @@ video {
 
 .pr-5 {
   padding-right: 1.25rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .text-center {
@@ -1029,6 +1096,10 @@ video {
 
 .font-impact {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.font-libertinus {
+  font-family: "Libertinus Serif", serif;
 }
 
 .font-segoe {
@@ -1056,6 +1127,11 @@ video {
 
 .text-5xl {
   font-size: 3rem;
+  line-height: 1;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
   line-height: 1;
 }
 
@@ -1162,6 +1238,10 @@ video {
   color: rgb(254 240 138 / var(--tw-text-opacity, 1));
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1178,6 +1258,30 @@ video {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.\[animation-delay\:0\.2s\] {
+  animation-delay: 0.2s;
+}
+
+.\[animation-delay\:0\.3s\] {
+  animation-delay: 0.3s;
+}
+
+.\[animation-delay\:0\.4s\] {
+  animation-delay: 0.4s;
+}
+
+.\[animation-delay\:0\.5s\] {
+  animation-delay: 0.5s;
+}
+
+.\[animation-delay\:0\.6s\] {
+  animation-delay: 0.6s;
+}
+
+.\[animation-delay\:0s\] {
+  animation-delay: 0s;
 }
 
 .text-shadow-custom {
@@ -1276,6 +1380,10 @@ video {
 }
 
 @media (min-width: 480px) {
+  .xs\:-mt-0 {
+    margin-top: -0px;
+  }
+
   .xs\:ml-0 {
     margin-left: 0px;
   }
@@ -1292,8 +1400,28 @@ video {
     margin-top: 3rem;
   }
 
+  .xs\:mt-2 {
+    margin-top: 0.5rem;
+  }
+
+  .xs\:mt-8 {
+    margin-top: 2rem;
+  }
+
+  .xs\:h-\[65\%\] {
+    height: 65%;
+  }
+
   .xs\:w-\[33rem\] {
     width: 33rem;
+  }
+
+  .xs\:w-\[400px\] {
+    width: 400px;
+  }
+
+  .xs\:w-\[60\%\] {
+    width: 60%;
   }
 
   .xs\:grid-cols-fluid {
@@ -1306,6 +1434,16 @@ video {
 
   .xs\:gap-12 {
     gap: 3rem;
+  }
+
+  .xs\:bg-\[\#792525\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(121 37 37 / var(--tw-bg-opacity, 1));
+  }
+
+  .xs\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .xs\:tracking-\[20px\] {
@@ -1344,5 +1482,9 @@ video {
 
   .lg\:mt-6 {
     margin-top: 1.5rem;
+  }
+
+  .lg\:w-\[45\%\] {
+    width: 45%;
   }
 }
