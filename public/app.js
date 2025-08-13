@@ -94,7 +94,7 @@ next.addEventListener("click", function () {
   win.style.display = "none";
   lose.style.display = "none";
   arena.style.display = "none";
-  reSelect.style.display = "block";
+  reSelect.style.display = "flex";
   next.style.display = "none";
 });
 
@@ -114,7 +114,7 @@ const sword = document.getElementById("sword");
 const victory = document.getElementById("victory");
 const result = document.getElementById("result-final");
 const difeat = document.getElementById("difeat");
-const restart = document.querySelector(".restart");
+const restart = document.getElementById("restart");
 const round = document.getElementById("round");
 strike.addEventListener("click", function () {
   if (weaponReSelected) {
@@ -138,16 +138,15 @@ strike.addEventListener("click", function () {
             game.style.display = "none";
             result.style.display = "flex";
             victory.style.display = "flex";
-            restart.style.display = "flex";
-            restart.style.animation = "bounce 0.7s ease-in-out 3";
+            restart.classList.add("hop");
             launchVictoryConfetti();
           }, 500);
         } else if (scoreCom === 3) {
           setTimeout(() => {
             game.style.display = "none";
+            result.style.display = "flex";
             difeat.style.display = "flex";
-            restart.style.display = "flex";
-            restart.style.animation = " fadeaway 2s ease-in";
+            restart.classList.add("fadeaway");
           }, 500);
         }
         swordContainer.classList.remove("sword-container");

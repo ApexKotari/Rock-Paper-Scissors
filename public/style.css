@@ -649,8 +649,8 @@ video {
   margin-left: 0.5rem;
 }
 
-.ml-28 {
-  margin-left: 7rem;
+.ml-24 {
+  margin-left: 6rem;
 }
 
 .ml-\[23px\] {
@@ -1031,6 +1031,10 @@ video {
   padding: 1rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -1066,12 +1070,12 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.pr-5 {
-  padding-right: 1.25rem;
-}
-
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pr-5 {
+  padding-right: 1.25rem;
 }
 
 .text-center {
@@ -1306,6 +1310,42 @@ video {
 @keyframes lean {
   100% {
     transform: rotateZ(40deg);
+  }
+}
+
+.fadeaway {
+  animation: fadeaway 2s ease-in;
+}
+
+@keyframes fadeaway {
+  0% {
+    opacity: 0;
+    fliter: blur(4px);
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    fliter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.hop {
+  animation: hop 0.7s ease-in-out 3;
+}
+
+@keyframes hop {
+  0% {
+    transform: translateY(10px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(10px);
   }
 }
 

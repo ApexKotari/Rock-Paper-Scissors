@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 .text-shadow-custom {
   text-shadow: 3px 3px black, 4px 4px rgb(57, 57, 197);
 }
@@ -21,5 +21,34 @@
 @keyframes lean {
   100% {
     transform: rotateZ(40deg);
+  }
+}
+.fadeaway {
+  animation: fadeaway 2s ease-in;
+}
+@keyframes fadeaway {
+  0% {
+    opacity: 0;
+    fliter: blur(4px);
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    fliter: blur(0);
+    transform: translateY(0);
+  }
+}
+.hop {
+  animation: hop 0.7s ease-in-out 3;
+}
+@keyframes hop {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
   }
 }

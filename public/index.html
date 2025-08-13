@@ -17,8 +17,9 @@
       src="https://kit.fontawesome.com/f0fe95102f.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   </head>
-  <body class="flex items-center justify-center h-screen bg-[#933d3d]">
+  <body class="flex justify-center h-auto bg-[#933d3d]">
     <!-- intro animation -->
     <div
       class="w-full h-screen bg-[#23434b] flex items-center justify-center"
@@ -43,7 +44,10 @@
       </div>
     </div>
     <!-- lobby -->
-    <div id="lobby" class="hidden flex-col items-center p-4 w-screen">
+    <div
+      id="lobby"
+      class="hidden flex flex-col items-center p-4 w-screen h-full"
+    >
       <h1
         class="text-fluid-size font-abril tracking-widest font-bold text-primary"
       >
@@ -102,8 +106,11 @@
         >
       </button>
     </div>
-    <!-- lobby -->
-    <div class="hidden flex-col p-2 relative items-center" id="game">
+    <!-- arena -->
+    <div
+      class="hidden flex-col p-2 relative items-center ml-24 xs:ml-0"
+      id="game"
+    >
       <div class="text-center text-3xl font-extrabold text-primary font-gill">
         <p>Round:<span class="ml-2" id="round">1</span></p>
       </div>
@@ -137,7 +144,7 @@
         </div>
       </div>
       <!-- hand display -->
-      <div class="flex p-3 gap-5 xs:gap-12 xs:flex-row flex-col" id="arena">
+      <div class="flex p-8 gap-5 xs:gap-12 xs:flex-row flex-col" id="arena">
         <div class="w-[250px] h-auto" id="you">
           <img
             class="max-w-full h-auto rounded-lg"
@@ -194,7 +201,7 @@
       </div>
       <!-- next round weapon section-->
       <div
-        class="hidden flex-col absolute top-40 rounded-lg h-auto w-[30rem] xs:w-[33rem] sm:w-[36rem] md:w-[700px] bg-[#921a1a] items-center p-3"
+        class="hidden text-center flex-col absolute top-40 rounded-lg h-auto w-[30rem] xs:w-[33rem] sm:w-[36rem] md:w-[700px] bg-[#921a1a] items-center p-3"
         id="reselect"
       >
         <h2 class="text-lg text-clip text-white mt-3">Choose your weapon</h2>
@@ -232,7 +239,7 @@
         </div>
         <!-- strike again button -->
         <button
-          class="font-verdana text-[1.3rem] font-bold bg-button text-black py-2 px-6 rounded-3xl cursor-pointer tracking-widest flex gap-2 mt-10 overflow-hidden relative"
+          class="font-verdana text-[1.3rem] font-bold bg-button text-black py-2 px-6 rounded-3xl cursor-pointer tracking-widest flex gap-2 mt-10 overflow-hidden relative my-auto"
           id="strike"
         >
           <span
@@ -266,7 +273,7 @@
       </div>
       <div
         id="difeat"
-        class="bg-[#933d3d] xs:bg-[#792525] pb-4 rounded-lg xs:mt-8 hidden flex-col items-center gap-6 overflow-hidden xs:w-[400px]"
+        class="hidden bg-[#933d3d] xs:bg-[#792525] pb-4 rounded-lg xs:mt-8 flex-col items-center gap-6 overflow-hidden xs:w-[400px]"
       >
         <div
           class="text-white font-libertinus text-6xl xs:text-5xl font-bold mt-10"
@@ -303,6 +310,7 @@
         />
       </div>
       <button
+        id="restart"
         class="font-verdana m-auto mt-10 text-xl py-1 px-3 rounded-lg bg-button font-semibold tracking-wider text-balance cursor-pointer"
         onclick="location.reload()"
       >
